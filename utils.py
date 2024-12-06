@@ -1,17 +1,5 @@
-from pyspark.sql.types import IntegerType, StringType, FloatType
 from io import BytesIO
 import tempfile
-
-def map_from_pandas_to_spark(dtype):
-    if dtype in ['int64', 'int32']:
-        return IntegerType()
-    elif dtype == 'float64':
-        return FloatType()
-    elif dtype in ['string', 'object']:
-        return StringType()
-    else:
-        return ValueError(f'Type not soported: {dtype}')
-    
 
 def upload_dataframe_to_s3(s3_client, dataframe, object_name:str, bucket_name:str):
     buffer = BytesIO()
