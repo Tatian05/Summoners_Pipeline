@@ -1,7 +1,7 @@
 from io import BytesIO
 import tempfile
 
-def upload_dataframe_to_s3(s3_client, dataframe, object_name:str, bucket_name:str):
+def upload_data_to_s3(s3_client, dataframe, object_name:str, bucket_name:str):
     buffer = BytesIO()
     dataframe.to_parquet(buffer, engine="pyarrow", index=False)
     buffer.seek(0)
