@@ -1,7 +1,7 @@
 import os
 
-SUMM_NAME = "TATIAN"
-TAG_LINE = "LAS"
+SUMM_NAME = input("Insert your summoner name...")
+TAG_LINE = input("Insert your tag line...")
 
 api_key = os.environ.get("Summoner's_Pipeline")
 
@@ -18,4 +18,4 @@ SERVERS = {
 
 AWS_REGION_NAME = "us-east-1"
 
-JDBC_PATH = "C:\spark-3.5.3-bin-hadoop3\jars\redshift-jdbc42-2.1.0.31"
+JDBC_PATH = "C:\spark\jars\redshift-jdbc42-2.1.0.32"
